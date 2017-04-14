@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+  </head>
+  <body>
+
+    <div id="game">
+
+    </div>
+
+    <script type="text/javascript">
+      // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+      var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      var wins = 0;
+      var losses = 0;
+      var guessesLeft = 9;
+      var yourGuessesSoFar = [];
+      var totalwins = 0;
+      var totallosses = 0;
+
+      //initial display//
+      
+
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+
+      //initial display ends//
+
+
+     var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      // This function is run whenever the user presses a key.
+       document.onkeyup = function(event) {
+        // Determines which key was pressed
+        var userGuess = [];
+        var userGuess = event.key;
+        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      
+     //  document.onkeyup = function(event) {
+     // var letter = String.fromCharCode(event.keyCode).toLowerCase(); 
+
+  for (var i=0; i<9; i++) {  //for loop started  
+
+    yourGuessesSoFar.push(prompt("what is your GuessesSoFar"));
+    // var userGuess[i] = userGuess[i].toLowerCase();//
+
+      if (userGuess == computerGuess) {
+        totalwins++; //totalwins to check  # guess matched
+        guessesLeft--;}
+     else {
+      totallosses++; //totalwins to check # guess not matched
+     guessesLeft--;}
+
+  }; //for loop ends//
+
+  alert("Please refresh browser page to reset parameters");
+
+if (totalwins>0) { wins++; }
+else {losses++;}
+
+
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+
+
+    }
+
+
+while(i>9)
+
+{     
+
+ // This function is run whenever the user presses a key.
+       document.onkeyup = function(event) {
+        // Determines which key was pressed
+ var computerChoices = ["m", "i", "r", "t", "a", "l", "k", "h", "n"];
+      var wins = 0;
+      var losses = 0;
+      var guessesLeft = 9;
+      var yourGuessesSoFar = [];
+      var totalwins = 0;
+      var totallosses = 0;
+
+      //initial display//
+      
+document.write("<p>totalwins: " + totalwins + "</p>");
+document.write("<p>totallosses: " + totallosses + "</p>");
+document.write("<p><h1>The Psychic Game</h1></p>");
+document.write("<p><h3>Guess what letters I'm thinking of</h3></p>");
+document.write("<p>wins: " + wins + "</p>");
+document.write("<p>losses: " + losses + "</p>");
+document.write("<p>guessesLeft: " + guessesLeft + "</p>" );
+document.write("<p>your Guesses So Far: " + yourGuessesSoFar + "</p>");
+
+      //initial display ends//
+};
+};  //function(event) ends
+
+    </script>
+
+  </body>
+</html>
